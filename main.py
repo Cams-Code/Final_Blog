@@ -83,7 +83,7 @@ class Comment(db.Model):
     post_id = Column(Integer, ForeignKey("blog_posts.id"))
     related_post = relationship("BlogPost", back_populates="post_comments")
 
-# db.create_all()
+db.create_all()
 
 
 # user_loader callback
