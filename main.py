@@ -59,7 +59,7 @@ class BlogPost(db.Model):
     subtitle = Column(String(250), nullable=False)
     date = Column(String(250), nullable=False)
     body = Column(Text, nullable=False)
-    img_url = Column(String(250), nullable=False)
+    img_url = Column(String, nullable=False)
 
     # Creates foreign key.
     author_id = Column(Integer, ForeignKey("Users.id"))
