@@ -200,11 +200,6 @@ def about():
     return render_template("about.html", logged_in=current_user.is_authenticated)
 
 
-@app.route("/contact")
-def contact():
-    return render_template("contact.html", logged_in=current_user.is_authenticated)
-
-
 @app.route("/new-post", methods=["GET", "POST"])
 @admin_only
 @login_required
